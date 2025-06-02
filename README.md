@@ -6,3 +6,4 @@
 - [TypeScript](https://www.typescriptlang.org/)
 - [ESLint](https://eslint.org/)
 - [Vercel](https://vercel.com/)
+- Shadcn UI [Components](https://ui.shadcn.com/)
