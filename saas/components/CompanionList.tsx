@@ -18,9 +18,9 @@ interface  IProps{
 }
 
 const CompanionList=(props:IProps)=>{
-    
+
     const {title,companions, className}=props;
-    
+
     return (
         <>
             <article className={cn("companion-list",className)}>
@@ -33,46 +33,46 @@ const CompanionList=(props:IProps)=>{
                             <TableHead className="text-lg w-2/3">Lesson</TableHead>
                             <TableHead className="text-lg">Subject</TableHead>
                             <TableHead className="text-lg text-right">Duration</TableHead>
-                            
+
                         </TableRow>
                     </TableHeader>
                     <TableBody>
-                        {companions?.map((companions)=>(
-                            <TableRow key={companions.$id}>
+                        {companions?.map((companion)=>(
+                            <TableRow key={companion.id || companion.$id}>
                                 <TableCell>
-                                    <Link href={`/companions/${companions.$id}`}>
+                                    <Link href={`/companions/${companion.id || companion.$id}`}>
                                        <div className="flex items-center gap-2">
                                            <div 
                                                className="size-[72px] flex items-center justify-center rounded-lg max-md:hidden" 
-                                               style={{backgroundColor:getSubjectColor(companions.subject)}}>
-                                               <Image src={`/icons/${companions.subject}.svg`} alt={companions.subject} width={35} height={35} />
+                                               style={{backgroundColor:getSubjectColor(companion.subject)}}>
+                                               <Image src={`/icons/${companion.subject}.svg`} alt={companion.subject} width={35} height={35} />
                                            </div>
                                            <div className="flex flex-col gap-2">
                                                <p className="font-bold text-2xl">
-                                                   {companions.name}
+                                                   {companion.name}
                                                </p>
                                                <p className="text-lg">
-                                                   {companions.topic}
+                                                   {companion.topic}
                                                </p>
                                            </div>
                                        </div>
                                     </Link>
-                                    
+
                                 </TableCell>
                                 <TableCell>
                                     <div className="subject-badge w-fit max-md:hidden">
-                                        {companions.subject}
+                                        {companion.subject}
                                     </div>
                                     <div className="flex items-center justify-center rounded-lg w-fit p-2 md:hidden"
-                                        style={{backgroundColor:getSubjectColor(companions.subject)}}
+                                        style={{backgroundColor:getSubjectColor(companion.subject)}}
                                         >
-                                        <Image src={`/icons/${companions.subject}.svg`} alt={companions.subject} width={18} height={18}/>
+                                        <Image src={`/icons/${companion.subject}.svg`} alt={companion.subject} width={18} height={18}/>
                                     </div>
                                 </TableCell>
                                 <TableCell>
                                     <div className="flex items-center gap-2 w-full justify-end">
                                         <p className="text-2xl">
-                                            {companions.duration} {' '}
+                                            {companion.duration} {' '}
                                             <span className="max-md:hidden">
                                                 minutes
                                             </span>
@@ -84,7 +84,7 @@ const CompanionList=(props:IProps)=>{
                         ))}
                     </TableBody>
                 </Table>
-                
+
             </article>
         </>
     )
