@@ -27,9 +27,7 @@ const CompanionList=(props:IProps)=>{
                 <h2 className="font-bold text-3xl">
                     Recent Session
                 </h2>
-
                 <Table>
-                    
                     <TableHeader>
                         <TableRow>
                             <TableHead className="text-lg w-2/3">Lesson</TableHead>
