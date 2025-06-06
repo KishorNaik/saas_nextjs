@@ -4,6 +4,6 @@
 - [Next.js](https://nextjs.org/)
 - [TailwindCSS](https://tailwindcss.com/)
 - [TypeScript](https://www.typescriptlang.org/)
-- [ESLint](https://eslint.org/)
-- [Vercel](https://vercel.com/)
 - Shadcn UI [Components](https://ui.shadcn.com/)
+- Clerk [Authentication](https://clerk.com/)
+- Supabase [Database](https://supabase.com/) (2f8kE0mFoYWZlhII) (https://full-mastiff-9.clerk.accounts.dev)
