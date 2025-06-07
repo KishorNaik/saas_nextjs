@@ -3,6 +3,7 @@ import {currentUser} from "@clerk/nextjs/server";
 import {redirect} from "next/navigation";
 import {getSubjectColor} from "@/lib/utils";
 import Image from "next/image";
+import CompanionComponent from "@/components/CompanionComponent";
 
 interface IProps{
     params:Promise<{id:string}>
@@ -46,6 +47,12 @@ const CompanionSessionPage=async (params:IProps)=>{
                         {companion.duration} minutes
                     </div>
                 </article>
+                <CompanionComponent
+                    {...companion}
+                    companionId={companion.id}
+                    userName={user.firstName}
+                    userImage={user.imageUrl}
+                />
             </main>
         </>
     )
