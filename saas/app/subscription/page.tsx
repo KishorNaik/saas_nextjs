@@ -3,9 +3,9 @@ import {PricingTable} from "@clerk/nextjs";
 const SubscriptionPage = () => {
     return (
         <>
-            <div>
+            <main>
                 <PricingTable/>
-            </div>
+            </main>
         </>
     )
 }
