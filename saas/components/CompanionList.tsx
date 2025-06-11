@@ -25,7 +25,7 @@ const CompanionList=(props:IProps)=>{
         <>
             <article className={cn("companion-list",className)}>
                 <h2 className="font-bold text-3xl">
-                    Recent Session
+                    {title}
                 </h2>
                 <Table>
                     <TableHeader>
