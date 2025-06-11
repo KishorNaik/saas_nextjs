@@ -9,3 +9,4 @@
 - Supabase [Database](https://supabase.com/) (2f8kE0mFoYWZlhII) (https://full-mastiff-9.clerk.accounts.dev)
 - Lottie [Animations](https://lottiefiles.com/)
 - VAPI AI [Speech to Text](https://vapi.ai/)
+- Sentry [Error Tracking](https://sentry.io/) (http://localhost:3000/sentry-example-page)
