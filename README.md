@@ -24,6 +24,7 @@ This project embraces the Vertical Slice Architecture (VSA) pattern to encourage
 - This architecture enables easier debugging, maintainability, and horizontal scalability, as each slice can be independently tested and deployed.
 
 ## Disclaimer
-This project is inspired by the original SaaS boilerplate created by [Adrian Hajdin](https://github.com/adrianhajdin/saas-app). While the foundational structure and some base logic were adopted from his repository, significant architectural changes have been made—most notably the implementation of Vertical Slice Architecture—to enhance maintainability, scalability, and modular design.
+This project is inspired by the original SaaS boilerplate created by [Adrian Hajdin](https://github.com/adrianhajdin/saas-app). 
+While the foundational structure and some base logic were adopted from his repository, significant architectural changes have been made most notably the implementation of Vertical Slice Architecture to enhance maintainability, scalability, and modular design.
 
 Credit and thanks to Adrian for the original work that served as a strong starting point.
