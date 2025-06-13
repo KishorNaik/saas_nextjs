@@ -1,7 +1,9 @@
-import { SignIn } from '@clerk/nextjs'
+import SignInPage from "@/modules/users/features/Sign-In";
 
 export default function Page() {
-    return <main className="flex items-center justify-center">
-        <SignIn />
-    </main>
+    return (
+        <>
+            <SignInPage/>
+        </>
+    )
 }
