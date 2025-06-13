@@ -1,7 +1,5 @@
 "use client";
-import {cn, configureAssistant, getSubjectColor} from "@/lib/utils";
-import Image from "next/image";
-import soundwaves from "@/constants/soundwaves.json";
+
 import {useCompanionAiPanel} from "./hooks";
 import dynamic from "next/dynamic";
 

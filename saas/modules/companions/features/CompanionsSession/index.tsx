@@ -1,8 +1,8 @@
-import {getCompanion} from "@/lib/actions/companion.actions";
 import {currentUser} from "@clerk/nextjs/server";
 import {redirect} from "next/navigation";
 import TitlePanel from "@/modules/companions/features/CompanionsSession/components/TitlePanel";
 import CompanionAiPanel from "@/modules/companions/features/CompanionsSession/components/CompanionAiPanel";
+import {getCompanion} from "@/modules/companions/shared/services/db/getCompanion";
 
 interface CompanionSessionPageProps {
     params: Promise<{ id: string}>;

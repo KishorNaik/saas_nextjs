@@ -1,9 +1,8 @@
 import {useEffect, useRef, useState} from "react";
 import {LottieRefCurrentProps} from "lottie-react";
 import {CallStatus} from "@/modules/companions/features/CompanionsSession/components/CompanionAiPanel";
-import {addToSessionHistory} from "@/lib/actions/companion.actions";
 import {vapi} from "@/lib/vapi";
-import {configureAssistant} from "@/lib/utils";
+
 
 interface CompanionComponentParameters {
     companionId: string;
@@ -43,9 +42,20 @@ export const useCompanionAiPanel = (params: CompanionComponentParameters) => {
     useEffect(() => {
         const onCallStart = () => setCallStatus(CallStatus.ACTIVE);
 
-        const onCallEnd = () => {
+        const onCallEnd = async () => {
             setCallStatus(CallStatus.FINISHED);
-            addToSessionHistory(companionId)
+
+            try {
+                await fetch('/api/companions/session-history', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ companionId }),
+                });
+            } catch (error) {
+                console.error('Failed to add session to history:', error);
+            }
         }
 
         const onMessage = (message: Message) => {
